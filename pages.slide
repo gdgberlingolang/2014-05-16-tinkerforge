@@ -1,0 +1,89 @@
+Go and hardware - Tinkerforge
+A short overview
+16 May 2014
+Tags: go golang hardware tinkerforge
+
+Dirk Jablonowski
+
+dirk@jabl.net
+http://www.jabl.net/
+
+* Go and DIY hardware
+
+The go programming language has some characteristics, which restricts the DIY hardware selection.
+
+- - GC (realtime)
+- - go routines (resources)
+- - executable & runtime size (resources)
+- - (concurrency not easy for beginners)
+- + cross complier
+- + good standard libraries
+
+* DIY hardware one
+
+.link http://www.arduino.cc Arduino
+- Own language "Arduino programming language" and "Arduino development environment" (own IDE)
+
+.link http://cubieboard.org Cubieboard
+- many ARM CPU boards
+
+.link http://www.parallella.org Parallella
+- Dual-core ARM A9 CPU, 16 or 64-core Epiphany Multicore Accelerator, 1GB RAM
+- Epiphany SDK (*C*), CO-PRocessing THReads ® SDK (C++)
+
+.link http://www.raspberrypi.org Raspberry Pi
+- Single-core ARM1176JZFS CPU, 512 MB RAM (Model B)
+
+* DIY Hardware two
+
+.link http://www.adafruit.com/ adafruit
+- online shop for DIY hardware
+- examples, tutorials, projects, and many more
+
+.link http://www.makeblock.cc Makeblock
+- open source construction platform
+
+.link http://www.seeedstudio.com SEEED Studio
+- open hardware company for makers (commercial)
+
+.link http://www.tinkerforge.com Tinkerforge
+- open hardware modules as blocks or bricks for tinker, education and industry
+- API in many languages (C/C++, C#, Delphi/Lazarus, Java, JavaScript, LabVIEW, Mathematica, MATHLAB, Perl, PHP, Python, Ruby, Shell, Visual Basic .NET)
+
+* Tinkerforge
+
+.image TinkerforgeHardware.jpg
+
+* Go, my API and Tinkerforge - Example temperature (one)
+
+*Call*the*actual*temperature*from*the*bricklet*
+
+.code temp1.go
+
+* Go, my API and Tinkerforge - Example temperature (two)
+
+.code temp2.go
+
+* Go, my API and Tinkerforge - Example temperature (three)
+
+.code temp3.go
+
+* Go, my API and Tinkerforge - Example all bricks (one)
+
+*Call*all*hardware*(enumerate*callback)*
+
+.code ls1.go
+
+* Go, my API and Tinkerforge - Example all bricks (two)
+
+.code ls2.go
+
+* Go, my API and Tinkerforge - bricker
+
+.code bricker.go
+
+* Go, my API and Tinkerforge - manager and event
+
+.code manager.go
+
+.code event.go
